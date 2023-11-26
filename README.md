@@ -2,7 +2,7 @@
 Cheating Detection using the Nvidia Jetson Nano and the YOLO Darknet framework.
 
 ### Making sure cuda is set on your Jetson Nano
-Use this command on your terminal:
+1. Use this command on your terminal:
 ```Shell
 nvcc --version
 ```
@@ -14,8 +14,11 @@ Built on Wed_Jun__8_16:49:14_PDT_2022
 Cuda compilation tools, release 10.2, V10.2.0
 Build cuda_10.2.r10.2/compiler.31442593_0
 ```
-
-if not then run the following:
+2. If you instead get:
+```Shell
+Command 'nvcc' not found.
+```
+Then run the following command to open the ```.bashrc``` file:
 ```Shell
  nano /home/$USER/.bashrc
 ```
@@ -26,6 +29,7 @@ And add these lines to ```.bashrc```:
 ```
 
 
+###Installing Darknet
 Clone AlexeyAB's Darknet repository:
 
 ```Shell
