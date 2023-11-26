@@ -101,7 +101,9 @@ backup = backup
 
 
 ### 3. Training on colab:
-Using this colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D4iJc1YrJQu-HGLapft7IjGYrwMHJVOH/) we trained our YOLO model.
+Using this colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D4iJc1YrJQu-HGLapft7IjGYrwMHJVOH/) we trained our YOLO model.  
+
+The training chart:
 ![alt text](https://github.com/Aegyptiacus11/CheatingDetectionJetsonNano/blob/main/chart.png)
 
 ## III. Testing and deployment:
@@ -112,3 +114,5 @@ the gstreamter for the Raspberry Pi camera that we'll use should be ```" nvargus
 ```Shell
 ./darknet detector demo cheating.data model.cfg model.weights " nvarguscamerasrc ! video/x-raw(memory:NVMM), width=(int)1920, height=(int)1080,format=(string)NV12, framerate=(fraction)30/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! Appsink"
 ```
+
+![alt-text-1](https://github.com/Aegyptiacus11/CheatingDetectionJetsonNano/blob/main/test4.png "title-1") ![alt-text-2](https://github.com/Aegyptiacus11/CheatingDetectionJetsonNano/blob/main/test3.png "title-2")
