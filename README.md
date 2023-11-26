@@ -53,7 +53,14 @@ ARCH= -gencode arch=compute_53,code=[sm_53,compute_53]
 ### 1. Model configuration & dataset:
 We chose to use ```YOLOv4-tiny``` architecture for this task.  
 
-Using this colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1G188PEVGwdTbPvotCFRM_l2mluUhShwy#scrollTo=Xx5PnGZCz3fy/) we prepared our dataset and split it into train and validation.
+The following colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1G188PEVGwdTbPvotCFRM_l2mluUhShwy#scrollTo=Xx5PnGZCz3fy/) shows how we prepared our dataset and split it into train and validation.  
+
+We also added to the folder of the dataset the configuration file for the YOLO model ```yolov4-tiny.cfg``` and changed what needed to be changed.
+
+```cfg
+hello = 1
+```
+
 
 
 ### 3. Training on colab:
