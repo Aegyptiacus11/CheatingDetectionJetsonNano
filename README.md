@@ -36,7 +36,7 @@ Clone AlexeyAB's Darknet repository:
 git clone https://github.com/AlexeyAB/darknet
 ```
 
-Set ```GPU``` ```CUDNN``` ```OPENCV``` to 1:
+Set ```GPU``` ```CUDNN``` and ```OPENCV``` to 1:
 
 ```Makefile
 GPU=1
