@@ -64,14 +64,20 @@ We also added to the folder of the dataset the configuration file for the YOLO m
 Content of the file cfg/cheating.data should be:
 ```Vim
 classes= 80
-train  = <replace with your path>/trainvalno5k.txt
-valid = <replace with your path>/testdev2017.txt
+train  = <replace with your path>/train.txt
+valid = <replace with your path>/valid.txt
 names = data/coco.names
 backup = backup
-eval=coco
 ```
 
 
 ### 3. Training on colab:
 Using this colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D4iJc1YrJQu-HGLapft7IjGYrwMHJVOH/) we trained our YOLO model.
 
+
+## 3. Testing and deployment:
+Unlike for a computer camera (or USB camera), when we use Nividia Jetson Nano with a Raspberry Pi camera we have to use a ```gstreamer link``` instead of ```0``` (or ```usb/video0```) to read frames with OpenCV.
+
+```Shell
+./darknet detector demo cheating.data model.cfg model.weights " nvarguscamerasrc ! video/x-raw(memory:NVMM), width=(int)1920, height=(int)1080,format=(string)NV12, framerate=(fraction)30/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! Appsink"
+```
