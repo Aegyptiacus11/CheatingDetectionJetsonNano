@@ -61,4 +61,4 @@ ARCH= -gencode arch=compute_53,code=[sm_53,compute_53]
 5. An executable named ```darknet``` will be created inside the folder.
 
 ## Training of the model
-using this colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D4iJc1YrJQu-HGLapft7IjGYrwMHJVOH/] add
+using this colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D4iJc1YrJQu-HGLapft7IjGYrwMHJVOH/)] add
