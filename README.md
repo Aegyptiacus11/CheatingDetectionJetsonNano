@@ -55,12 +55,21 @@ We chose to use ```YOLOv4-tiny``` architecture for this task.
 
 The following colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1G188PEVGwdTbPvotCFRM_l2mluUhShwy#scrollTo=Xx5PnGZCz3fy/) shows how we prepared our dataset and split it into train and validation.  
 
-We also added to the folder of the dataset the configuration file for the YOLO model ```yolov4-tiny.cfg``` and changed what needed to be changed.
+We also added to the folder of the dataset the configuration file for the YOLO model ```yolov4-tiny.cfg``` and modified it to suit our training data.
 
-```cfg
-hello = 1
+```Vim
+
 ```
 
+Content of the file cfg/cheating.data should be:
+```Vim
+classes= 80
+train  = <replace with your path>/trainvalno5k.txt
+valid = <replace with your path>/testdev2017.txt
+names = data/coco.names
+backup = backup
+eval=coco
+```
 
 
 ### 3. Training on colab:
