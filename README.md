@@ -37,21 +37,10 @@ git clone https://github.com/AlexeyAB/darknet
 cd darknet
 ```
 
-2. Set ```GPU``` ```CUDNN``` and ```OPENCV``` to 1 (assuming you have OpenCV and CUDNN installed) in the ```Makefile```:
+2. Set ```GPU=1``` ```CUDNN=1``` and ```OPENCV=1``` (assuming you have OpenCV and CUDNN installed) in the ```Makefile```.
+(optional: you can set ```LIBSO=1``` to use darknet with pyhton)
 
-```Makefile
-GPU=1
-CUDNN=1
-CUDNN_HALF=0
-OPENCV=1
-AVX=0
-OPENMP=0
-LIBSO=1
-ZED_CAMERA=0
-ZED_CAMERA_v2_8=0
-```
-
-3. Uncomment this line in the ```Makefile```:
+4. Uncomment this line in the ```Makefile```:
 ```Makefile
 ARCH= -gencode arch=compute_53,code=[sm_53,compute_53]
 ```
