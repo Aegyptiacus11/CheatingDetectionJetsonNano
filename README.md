@@ -1,7 +1,7 @@
 # CheatingDetectionJetsonNano
 Cheating Detection using the Nvidia Jetson Nano and the YOLO Darknet framework.
 
-```Making sure cuda is set on your Jetson Nano```
+## Making sure cuda is set on your Jetson Nano
 Use this command on your terminal:
 ```Shell
 nvcc --version
