@@ -84,7 +84,7 @@ filters=21
 classes=2
 ...
 ```
-We then added ```label.names``` to the data. the file should look like this:
+We then added ```labels.names``` to the data. the file should look like this:
 ```
 not_cheating
 cheating
@@ -95,7 +95,7 @@ And also ```cheating.data``` which should look as follows:
 classes = 2
 train  = <replace with your path>/train.txt
 valid = <replace with your path>/valid.txt
-names = label.names
+names = labels.names
 backup = backup
 ```
 
