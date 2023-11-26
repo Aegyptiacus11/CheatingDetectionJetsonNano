@@ -101,7 +101,9 @@ Using this colab notebook [![Open In Colab](https://colab.research.google.com/as
 
 
 ## III. Testing and deployment:
-Unlike for a computer camera (or USB camera), when we use Nividia Jetson Nano with a Raspberry Pi camera we have to use a ```gstreamer link``` instead of ```0``` (or ```usb/video0```) to read frames with OpenCV.
+Unlike for a computer camera (or USB camera), when we use Nividia Jetson Nano with a Raspberry Pi camera we have to use a ```gstreamer``` instead of ```0``` (or ```usb/video0```) to read frames with OpenCV.  
+
+the gstreamter for the Raspberry Pi camera that we'll use should be ```" nvarguscamerasrc ! video/x-raw(memory:NVMM), width=(int)1920, height=(int)1080,format=(string)NV12, framerate=(fraction)30/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! Appsink"```
 
 ```Shell
 ./darknet detector demo cheating.data model.cfg model.weights " nvarguscamerasrc ! video/x-raw(memory:NVMM), width=(int)1920, height=(int)1080,format=(string)NV12, framerate=(fraction)30/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! Appsink"
