@@ -51,7 +51,8 @@ ARCH= -gencode arch=compute_53,code=[sm_53,compute_53]
 
 ## 2. Training of the model:
 ### 1. Model configuration & dataset:
-We chose to use ```YOLOv4-tiny``` architecture for this task.\n
+We chose to use ```YOLOv4-tiny``` architecture for this task.  
+
 Using this colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1G188PEVGwdTbPvotCFRM_l2mluUhShwy#scrollTo=Xx5PnGZCz3fy/) we prepared our dataset and split it into train and validation.
 
 
