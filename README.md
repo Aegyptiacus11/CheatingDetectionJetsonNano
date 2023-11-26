@@ -54,7 +54,6 @@ ARCH= -gencode arch=compute_53,code=[sm_53,compute_53]
 We chose to use ```YOLOv4-tiny``` architecture for this task.  
 
 The following colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1G188PEVGwdTbPvotCFRM_l2mluUhShwy#scrollTo=Xx5PnGZCz3fy/) shows how we prepared our dataset and split it into train and validation.  
-
 We also added to the folder of the dataset the configuration file for the YOLO model ```yolov4-tiny.cfg``` and modified it to suit our training data as following the darknet repository:  
 i. change line batch to batch=64.  
 ii. change line subdivisions to subdivisions=16.  
@@ -85,13 +84,18 @@ filters=21
 classes=2
 ...
 ```
+We then added ```label.names``` to the data. the file should look like this:
+```
+not_cheating
+cheating
+```
 
-Content of the file ```cheating.data``` should be:
+And also ```cheating.data``` which should look as follows:
 ```Vim
 classes = 2
 train  = <replace with your path>/train.txt
 valid = <replace with your path>/valid.txt
-names = cheating.names
+names = label.names
 backup = backup
 ```
 
