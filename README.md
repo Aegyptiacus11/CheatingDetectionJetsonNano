@@ -70,7 +70,7 @@ classes=2
 ...
 ```
 x. change [```filters=255```] to filters=(classes + 5)x3 in the 2 ```[convolutional]``` before each ```[yolo]``` layer, keep in mind that it only has to be the last ```[convolutional]``` before each of the ```[yolo]``` layers.  
-So if ```classes=1``` then should be ```filters=18```. If ```classes=2``` then write ```filters=21```.  
+So if ```classes=1``` then it should be ```filters=18```. If ```classes=2``` then write ```filters=21```.  
 (Do not write in the cfg-file: filters=(classes + 5)x3)
 
 ```cfg
