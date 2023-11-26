@@ -29,7 +29,7 @@ And add these lines to ```.bashrc```:
 ```
 
 
-###Installing Darknet
+### Installing Darknet
 Clone AlexeyAB's Darknet repository:
 
 ```Shell
