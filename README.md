@@ -1,7 +1,9 @@
 # CheatingDetectionJetsonNano
 Cheating Detection using the Nvidia Jetson Nano and the YOLO Darknet framework.
 
-### Making sure CUDA PATH is set on your Jetson Nano (assuming you have CUDA installed)
+
+## Setting up Jetson Nano:
+### 1. Making sure CUDA PATH is set on your Jetson Nano (assuming you have CUDA installed):
 1. Use this command on your terminal:
 ```Shell
 nvcc --version
@@ -27,9 +29,7 @@ And add these lines to ```.bashrc```:
  export PATH="/usr/local/cuda-X.X/bin:$PATH"
  export LD_LIBRARY_PATH="/usr/local/cuda-X.X/lib64:$LD_LIBRARY_PATH"
 ```
-
-
-### Installing Darknet
+### 2. Installing Darknet:
 1. Clone AlexeyAB's Darknet repository:
 
 ```Shell
@@ -60,5 +60,5 @@ ARCH= -gencode arch=compute_53,code=[sm_53,compute_53]
 
 5. An executable named ```darknet``` will be created inside the folder.
 
-## Training of the model
+## 2. Training of the model:
 using this colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D4iJc1YrJQu-HGLapft7IjGYrwMHJVOH/) add
