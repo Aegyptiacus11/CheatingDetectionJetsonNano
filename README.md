@@ -102,7 +102,7 @@ backup = backup
 
 ### 3. Training on colab:
 Using this colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D4iJc1YrJQu-HGLapft7IjGYrwMHJVOH/) we trained our YOLO model.
-
+![alt text](https://github.com/Aegyptiacus11/CheatingDetectionJetsonNano/blob/main/chart.png)
 
 ## III. Testing and deployment:
 Unlike for a computer camera (or USB camera), when we use Nividia Jetson Nano with a Raspberry Pi camera we have to use a ```gstreamer``` instead of ```0``` (or ```usb/video0```) to read frames with OpenCV.  
