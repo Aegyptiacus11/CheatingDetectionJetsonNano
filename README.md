@@ -6,7 +6,7 @@ Cheating Detection using the Nvidia Jetson Nano and the YOLO Darknet framework.
 ```Shell
 nvcc --version
 ```
-The output should look something like this:
+   The output should look something like this:
 ```Shell
 nvcc: NVIDIA (R) Cuda compiler driver
 Copyright (c) 2005-2022 NVIDIA Corporation
@@ -18,7 +18,7 @@ Build cuda_10.2.r10.2/compiler.31442593_0
 ```Shell
 Command 'nvcc' not found.
 ```
-Then run the following command to open the ```.bashrc``` file:
+   Then run the following command to open the ```.bashrc``` file:
 ```Shell
  nano /home/$USER/.bashrc
 ```
@@ -56,6 +56,6 @@ ZED_CAMERA_v2_8=0
 ARCH= -gencode arch=compute_53,code=[sm_53,compute_53]
 ```
 
-4. run ```make``` command on your terminal (while you're still in the ```darknet``` folder)
+4. run ```make``` command on your terminal (while you're still in the ```darknet``` folder).
 
-5. An executable named ```darknet``` will be created inside the folder
+5. An executable named ```darknet``` will be created inside the folder.
