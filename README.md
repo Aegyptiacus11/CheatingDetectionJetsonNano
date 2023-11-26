@@ -114,5 +114,4 @@ the gstreamter for the Raspberry Pi camera that we'll use should be ```" nvargus
 ```Shell
 ./darknet detector demo cheating.data model.cfg model.weights " nvarguscamerasrc ! video/x-raw(memory:NVMM), width=(int)1920, height=(int)1080,format=(string)NV12, framerate=(fraction)30/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! Appsink"
 ```
-
-![alt-text-1](https://github.com/Aegyptiacus11/CheatingDetectionJetsonNano/blob/main/test4.png "title-1" =20%x) ![alt-text-2](https://github.com/Aegyptiacus11/CheatingDetectionJetsonNano/blob/main/test3.png "title-2" =20%x)
+<img src="https://github.com/Aegyptiacus11/CheatingDetectionJetsonNano/blob/main/test4.png" width="425"/> <img src="https://github.com/Aegyptiacus11/CheatingDetectionJetsonNano/blob/main/test3.png" width="425"/>
