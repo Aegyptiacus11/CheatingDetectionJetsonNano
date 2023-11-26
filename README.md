@@ -50,4 +50,11 @@ ARCH= -gencode arch=compute_53,code=[sm_53,compute_53]
 5. An executable named ```darknet``` will be created inside the folder.
 
 ## 2. Training of the model:
-using this colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D4iJc1YrJQu-HGLapft7IjGYrwMHJVOH/) add
+### 1. Model configuration & dataset:
+We chose to use ```YOLOv4-tiny``` architecture for this task.
+Using this colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1G188PEVGwdTbPvotCFRM_l2mluUhShwy#scrollTo=Xx5PnGZCz3fy/) we prepared our dataset and split it into train and validation.
+
+
+### 3. Training on colab:
+Using this colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D4iJc1YrJQu-HGLapft7IjGYrwMHJVOH/) we trained our YOLO model.
+
