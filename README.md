@@ -2,7 +2,7 @@
 Cheating Detection using the Nvidia Jetson Nano and the YOLO Darknet framework.
 
 
-## 1. Setting up Jetson Nano:
+## I. Setting up Jetson Nano:
 ### 1. Making sure CUDA PATH is set on your Jetson Nano (assuming you have CUDA installed):
 1. Use this command on your terminal:
 ```Shell
@@ -49,7 +49,7 @@ ARCH= -gencode arch=compute_53,code=[sm_53,compute_53]
 
 5. An executable named ```darknet``` will be created inside the folder.
 
-## 2. Training of the model:
+## II. Training of the model:
 ### 1. Model configuration & dataset:
 We chose to use ```YOLOv4-tiny``` architecture for this task.  
 
@@ -75,7 +75,7 @@ backup = backup
 Using this colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D4iJc1YrJQu-HGLapft7IjGYrwMHJVOH/) we trained our YOLO model.
 
 
-## 3. Testing and deployment:
+## III. Testing and deployment:
 Unlike for a computer camera (or USB camera), when we use Nividia Jetson Nano with a Raspberry Pi camera we have to use a ```gstreamer link``` instead of ```0``` (or ```usb/video0```) to read frames with OpenCV.
 
 ```Shell
