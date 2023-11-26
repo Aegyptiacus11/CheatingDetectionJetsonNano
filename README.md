@@ -59,3 +59,6 @@ ARCH= -gencode arch=compute_53,code=[sm_53,compute_53]
 4. run ```make``` command on your terminal (while you're still in the ```darknet``` folder).
 
 5. An executable named ```darknet``` will be created inside the folder.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D4iJc1YrJQu-HGLapft7IjGYrwMHJVOH/]
+
+
