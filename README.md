@@ -61,12 +61,12 @@ We also added to the folder of the dataset the configuration file for the YOLO m
 
 ```
 
-Content of the file cfg/cheating.data should be:
+Content of the file ```cheating.data``` should be:
 ```Vim
-classes= 80
+classes= 2
 train  = <replace with your path>/train.txt
 valid = <replace with your path>/valid.txt
-names = data/coco.names
+names = cheating.names
 backup = backup
 ```
 
