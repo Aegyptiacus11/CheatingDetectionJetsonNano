@@ -72,7 +72,13 @@ backup = backup
 
 
 ### 3. Training on colab:
-Using this colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D4iJc1YrJQu-HGLapft7IjGYrwMHJVOH/) we trained our YOLO model.
+Using this colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D4iJc1YrJQu-HGLapft7IjGYrwMHJVOH/) we trained our YOLO model.  
+i. change line batch to batch=64.  
+ii. change line subdivisions to subdivisions=16.  
+iii. change line max_batches to (classes*2000, but not less than number of training images and not less than 6000), max_batches=6000.  
+iv. change line steps to 80% and 90% of max_batches, f.e. steps=4800,5400.  
+
+
 
 
 ## III. Testing and deployment:
