@@ -6,7 +6,7 @@ Use this command on your terminal:
 ```Shell
 nvcc --version
 ```
-You should get something like this:
+The output should look something like this:
 ```Shell
 nvcc: NVIDIA (R) Cuda compiler driver
 Copyright (c) 2005-2022 NVIDIA Corporation
