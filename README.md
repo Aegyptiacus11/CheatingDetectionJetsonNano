@@ -64,18 +64,31 @@ v. experiment with other values that are used for data augmentation like ```angl
 vi. experiment also with other values such as ```momentum``` ```decay``` ```learning_rate``` ```burn_in```.  
 vii. set network size ```width=416``` ```height=416``` or any value multiple of 32.
 ix. change line ```classes=80``` to your number of objects in each of 2 ```[yolo]``` layers:
-
 ```cfg
 [yolo]
 ...
 classes=2
 ...
 ```
+x. change [```filters=255```] to filters=(classes + 5)x3 in the 2 ```[convolutional]``` before each ```[yolo]``` layer, keep in mind that it only has to be the last ```[convolutional]``` before each of the ```[yolo]``` layers.  
+So if ```classes=1``` then should be ```filters=18```. If ```classes=2``` then write ```filters=21```.  
+(Do not write in the cfg-file: filters=(classes + 5)x3)
 
+```cfg
+[convolutional]
+...
+filters=21
+...
+
+[yolo]
+...
+classes=2
+...
+```
 
 Content of the file ```cheating.data``` should be:
 ```Vim
-classes= 2
+classes = 2
 train  = <replace with your path>/train.txt
 valid = <replace with your path>/valid.txt
 names = cheating.names
