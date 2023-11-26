@@ -37,7 +37,7 @@ git clone https://github.com/AlexeyAB/darknet
 cd darknet
 ```
 
-2. Set ```GPU=1``` ```CUDNN=1``` and ```OPENCV=1``` (assuming you have OpenCV and CUDNN installed) in the ```Makefile```.
+2. Set ```GPU=1``` ```CUDNN=1``` and ```OPENCV=1``` (assuming you have OpenCV and CUDNN installed) in the ```Makefile```.  
    (optional: you can set ```LIBSO=1``` to use darknet with pyhton)
 
 4. Uncomment this line in the ```Makefile```:
