@@ -1,7 +1,7 @@
 # CheatingDetectionJetsonNano
 Cheating Detection using the Nvidia Jetson Nano and the YOLO Darknet framework.
 
-### Making sure cuda is set on your Jetson Nano
+### Making sure cuda is set on your Jetson Nano (assuming you have cuda installed)
 1. Use this command on your terminal:
 ```Shell
 nvcc --version
@@ -30,13 +30,14 @@ And add these lines to ```.bashrc```:
 
 
 ### Installing Darknet
-Clone AlexeyAB's Darknet repository:
+1. Clone AlexeyAB's Darknet repository:
 
 ```Shell
 git clone https://github.com/AlexeyAB/darknet
+cd darknet
 ```
 
-Set ```GPU``` ```CUDNN``` and ```OPENCV``` to 1:
+2. Set ```GPU``` ```CUDNN``` and ```OPENCV``` to 1 (assuming you have OpenCV and CUDNN installed) in the ```Makefile```:
 
 ```Makefile
 GPU=1
@@ -50,7 +51,11 @@ ZED_CAMERA=0
 ZED_CAMERA_v2_8=0
 ```
 
-And uncomment this line in the Makefile
+3. Uncomment this line in the ```Makefile```:
 ```Makefile
 ARCH= -gencode arch=compute_53,code=[sm_53,compute_53]
 ```
+
+4. run ```make``` command on your terminal (while you're still in the ```darknet``` folder)
+
+5. An executable named ```darknet``` will be created inside the folder
