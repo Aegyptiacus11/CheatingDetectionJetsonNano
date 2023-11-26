@@ -55,10 +55,37 @@ We chose to use ```YOLOv4-tiny``` architecture for this task.
 
 The following colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1G188PEVGwdTbPvotCFRM_l2mluUhShwy#scrollTo=Xx5PnGZCz3fy/) shows how we prepared our dataset and split it into train and validation.  
 
-We also added to the folder of the dataset the configuration file for the YOLO model ```yolov4-tiny.cfg``` and modified it to suit our training data.
-
+We also added to the folder of the dataset the configuration file for the YOLO model ```yolov4-tiny.cfg``` and modified it to suit our training data as follows:  
+i. change line batch to batch=64.  
+ii. change line subdivisions to subdivisions=16.  
+iii. change line max_batches to (classes*2000, but not less than number of training images and not less than 6000), ```max_batches=6000```.  
+iv. change line steps to 80% and 90% of max_batches, ```steps=4800,5400```.  
+v. experiment with other values that are used for data augmentation like ```angle``` ```saturation``` ```exposure``` ```hue```.  
+vi. experiment also with other values such as ```momentum``` ```decay``` ```learning_rate``` ```burn_in```.  
 ```Vim
+[net]
+# Testing
+#batch=1
+#subdivisions=1
+# Training
+batch=32
+subdivisions=1
+width=416
+height=416
+channels=3
+momentum=0.9
+decay=0.0005
+angle=0
+saturation = 1.5
+exposure = 1.5
+hue=.1
 
+learning_rate=0.00261
+burn_in=1000
+max_batches = 6000
+policy=steps
+steps=4800,5400
+scales=.1,.1
 ```
 
 Content of the file ```cheating.data``` should be:
@@ -72,13 +99,7 @@ backup = backup
 
 
 ### 3. Training on colab:
-Using this colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D4iJc1YrJQu-HGLapft7IjGYrwMHJVOH/) we trained our YOLO model.  
-i. change line batch to batch=64.  
-ii. change line subdivisions to subdivisions=16.  
-iii. change line max_batches to (classes*2000, but not less than number of training images and not less than 6000), max_batches=6000.  
-iv. change line steps to 80% and 90% of max_batches, f.e. steps=4800,5400.  
-
-
+Using this colab notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D4iJc1YrJQu-HGLapft7IjGYrwMHJVOH/) we trained our YOLO model.
 
 
 ## III. Testing and deployment:
