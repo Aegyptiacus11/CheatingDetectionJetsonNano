@@ -62,7 +62,7 @@ iii. change line max_batches to (classes*2000, but not less than number of train
 iv. change line steps to 80% and 90% of max_batches, ```steps=4800,5400```.  
 v. experiment with other values that are used for data augmentation like ```angle``` ```saturation``` ```exposure``` ```hue```.  
 vi. experiment also with other values such as ```momentum``` ```decay``` ```learning_rate``` ```burn_in```.  
-```Vim
+```cfg
 [net]
 # Testing
 #batch=1
